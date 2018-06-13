@@ -7,7 +7,8 @@ import serenityExample.BaseTest;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/feature",
-        glue = "src/test/java/serenityExample/steps")
+        features = "classpath:Features/en.feature",
+        glue = {"test/java/serenityExample/steps/"}
+)
 public class RunExampleTestSerenity extends BaseTest {
 }
