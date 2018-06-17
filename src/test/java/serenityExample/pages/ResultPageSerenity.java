@@ -8,10 +8,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class ResultPageSerenity extends PageObject {
 
-    @FindBy(css = ".b-content-center > .b-query:nth-of-type(1)")
+    @FindBy(css = ".b-content-center.b-content-center")
     WebElementFacade result;
 
-    public boolean setResultTable() {
+    public boolean checkResultsVisible() {
         result.waitUntilVisible();
         return result.isVisible();
     }

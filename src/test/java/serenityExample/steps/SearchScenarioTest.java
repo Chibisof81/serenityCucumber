@@ -38,24 +38,24 @@ public class SearchScenarioTest {
 //        assertTrue(resultPageSerenity.setResultTable());
 //    }
 
-    @Given("^user open site$")
+    @Given("user open site")
     public void userOpenSite() {
         searchPage.open();
     }
 
-    @When("^user write '(.*)'$")
+    @When("user write '(.*)'")
     public void userWrite(String text)  {
         searchPage.setSearchInput(text);
     }
 
-    @And("^push the button$")
+    @And("push the button")
     public void pushTheButton() {
         searchPage.setSearchButton();
     }
 
-    @Then("^search displayed$")
+    @Then("search displayed")
     public void searchDisplayed() {
-        assertTrue(resultPageSerenity.setResultTable());
+        assertTrue(resultPageSerenity.checkResultsVisible());
     }
 
 
